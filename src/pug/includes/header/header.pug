@@ -1,0 +1,28 @@
+include ../utils/mixin.pug
+
+.nav
+    .nav__logo
+        include ../components/logo.pug
+    ul.nav__list
+        li.nav__item
+            a(href="#" class="nav__link") About
+        li.nav__item 
+            .nav__dropdown
+                +dropdownText('Services', 'text-1')
+        li.nav__item 
+            a(href="#" class="nav__link") Jobs
+        li.nav__item 
+            a(href="#" class="nav__link") News
+        li.nav__item
+            .nav__dropdown
+                +dropdownText('Agreement', 'text-2')
+    .nav__user
+        include ../components/login.pug
+        include ../components/signup.pug
+    .nav__hamburger
+        include ../components/navigation.pug
+        
+
+
+
+        

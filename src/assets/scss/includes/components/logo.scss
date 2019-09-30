@@ -1,0 +1,22 @@
+.logo {
+
+  @include respond(tab-port) {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__link {
+    text-decoration: none;
+    font-size: $font-size-medium;
+    color: $default-color;
+    text-transform: uppercase;
+
+    &::before {
+      content: "";
+      padding: 1rem 2rem;
+      margin-right: 1rem;
+      border: 3px solid $primary-color-pink-light;
+      border-radius: 50%;
+    }
+  }
+}

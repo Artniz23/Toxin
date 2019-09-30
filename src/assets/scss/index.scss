@@ -1,0 +1,20 @@
+@import './includes/utils/mixin.scss';
+
+@import './includes/base/base.scss';
+@import './includes/base/animation.scss';
+@import './includes/base/variables.scss';
+
+@import './includes/components/logo.scss';
+@import './includes/components/login.scss';
+@import './includes/components/singup.scss';
+@import './includes/components/navigation.scss';
+@import './includes/components/dropdown-text.scss';
+@import './includes/components/datepicker.scss';
+@import './includes/components/dropdown.scss';
+@import './includes/components/primary-button.scss';
+
+@import './includes/header/header.scss';
+@import './includes/sections/main.scss';
+@import './includes/footer/footer.scss';
+
+@import './includes/utils/js.scss';

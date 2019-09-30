@@ -1,0 +1,80 @@
+// @import '../utils/mixin.scss';
+
+.datepicker {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-items: center;
+  position: relative;
+
+  @include respond(screen-500) {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  label {
+    font-size: $font-size-small;
+  }
+
+  input {
+    display: block;
+    max-width: 15rem;
+    margin-top: 4px;
+    border: 1px solid $border-secondary-color;
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    transition: $default-transition;
+
+    @include respond(screen-500) {
+      max-width: 70%;
+      padding: 1rem 1rem;
+      font-size: $font-size-small;
+      text-align: center;
+    }
+  }
+
+  &--start {
+    margin-right: 1.7rem;
+
+    @include respond(screen-500) {
+      margin-right: 0rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  &--start,
+  &--end {
+    @include respond(screen-500) {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &__chevron-start {
+    @include picker;
+    top: 68%;
+    left: 42%;
+
+    @include respond(screen-500) {
+      display: none;
+    }
+  }
+
+  &__chevron-end {
+    @include picker;
+    top: 68%;
+    right: 2%;
+
+    @include respond(screen-500) {
+      display: none;
+    }
+  }
+
+  .fa-chevron-down {
+    font-size: $font-size-chevron;
+  }
+}

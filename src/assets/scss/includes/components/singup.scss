@@ -1,0 +1,18 @@
+.signup {
+  display: inline-block;
+
+  &__link {
+    padding: 1rem 2rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: $color-white;
+    background: linear-gradient(180deg, $primary-color-pink-light 0%, $primary-color-blue-light 100%);
+    border: none;
+    border-radius: 2.2rem;
+    cursor: pointer;
+
+    &:hover {
+      background: linear-gradient(180deg, $primary-color-pink-dark 0%, $primary-color-blue-dark 100%);
+    }
+  }
+}

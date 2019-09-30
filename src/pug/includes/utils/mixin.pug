@@ -1,0 +1,21 @@
+mixin dropdownText(title, content)
+    .dropdown-text
+        .dropdown-text__title
+            | #{title}
+            i.fas.fa-chevron-right
+        .dropdown-text__content.hide
+            - const text1 = 'text-1'
+            - const text2 = 'text-2'
+            - const text3 = 'text-3'
+            if (content === text1)
+                a(href="#" class="dropdown-text__link") Dropdown 1
+                a(href="#" class="dropdown-text__link") Dropdown 2
+                a(href="#" class="dropdown-text__link") Dropdown 3
+            else if (content === text2)
+                a(href="#" class="dropdown-text__link") Dropdown 1
+                a(href="#" class="dropdown-text__link") Dropdown 2
+                a(href="#" class="dropdown-text__link") Dropdown 3
+                a(href="#" class="dropdown-text__link") Dropdown 4
+                a(href="#" class="dropdown-text__link") Dropdown 5
+            else 
+                a(href="#") Nothing

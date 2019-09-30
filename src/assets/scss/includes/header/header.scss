@@ -1,0 +1,87 @@
+.nav {
+  display: flex;
+  align-items: center;
+  margin: 3rem auto;
+  position: relative;
+
+  &__logo {
+    flex: 0 0 20%;
+    display: flex;
+    justify-content: center;
+
+    @include respond(phone) {
+      justify-content: flex-end;
+    }
+  }
+
+  &__list {
+    flex: 0 0 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+
+    @include respond(phone) {
+      display: none;
+    }
+
+  }
+
+  &__item {
+    display: inline-block;
+    padding: 0 3rem;
+    font-size: $font-size-small;
+    color: $secondary-color-light;
+
+    @include respond(tab-land) {
+      padding: 0 2rem;
+    }
+
+    @include respond(tab-port) {
+      padding: 0 1rem;
+    }
+
+
+    &:hover {
+      color: $secondary-color-dark;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $secondary-color-light;
+    transition: $default-transition;
+
+    &:hover {
+      color: $secondary-color-dark;
+    }
+  }
+
+  &__user {
+    flex: 0 0 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: $font-size-small;
+
+    @include respond(tab-land) {
+      justify-content: flex-start;
+    }
+
+    @include respond(phone) {
+      flex: 0 0 60%;
+      justify-content: center;
+    }
+
+  }
+
+  &__hamburger {
+    display: none;
+
+    @include respond(phone) {
+      flex: 0 0 20%;
+      display: flex;
+      justify-content: center;
+    }
+  }
+}

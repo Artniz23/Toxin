@@ -1,0 +1,10 @@
+.navigation
+    input(type="checkbox" class="navigation__checkbox" id="navi-toggle")
+    label(for="navi-toggle" class="navigation__button")
+        span.navigation__icon &nbsp;
+    .navigation__background &nbsp;
+    .navigation__nav
+        ul.navigation__list
+            each val in ["About Us", "Services", "Jobs", "News", "Agreement"]
+                li.navigation__item
+                a(href="#" class="navigation__link")= val

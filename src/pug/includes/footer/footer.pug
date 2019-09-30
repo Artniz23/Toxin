@@ -1,0 +1,40 @@
+footer.footer
+    .footer__description
+        .footer__logo
+            include ../components/logo.pug
+            p.footer__paragraph Booking rooms in the best hotel in 2019 according to the "Hotel Association"
+        .footer__content
+            ul.footer__list Navigation
+                each val in ['About us', 'News', 'Support', 'Services']
+                    li.footer__item
+                        a(href="#" class="footer__link")= val
+        .footer__content
+            ul.footer__list About us
+                each val in ['About Services', 'Out Teams', 'Vacancy', 'Investors']
+                    li.footer__item
+                        a(href="#" class="footer__link")= val
+        .footer__content
+            ul.footer__list Support
+                each val in ['Agreement', 'Community', 'Contact with us']
+                    li.footer__item
+                        a(href="#" class="footer__link")= val
+        .footer__subscribe
+            a(href="#") Subscribe
+            p Get special offers and service news
+            .footer__email
+                input(type="email" placeholder="Email" name="email")
+                button
+                    i.fas.fa-arrow-right
+                
+    .footer__rights
+
+        .footer__copyright
+            p Copyright &copy; 2019 TOXIN hotel. All rights reserved.
+
+        .footer__social
+            a(href="#")
+                i(class="fab fa-twitter")
+            a(href="#")
+                i(class="fab fa-facebook-square")
+            a(href="#")
+                i(class="fab fa-instagram")

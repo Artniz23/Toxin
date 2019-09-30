@@ -1,0 +1,196 @@
+.footer {
+  &__description {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(5, 1fr);
+    margin: 10rem 14rem;
+
+    @include respond(tab-port) {
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-columns: repeat(3, 1fr);
+      margin: 5rem 7rem;
+    }
+  }
+
+  &__logo {
+    align-self: center;
+
+    @include respond(tab-port) {
+      justify-self: center;
+      grid-column: 1 / 5;
+    }
+  }
+
+  &__paragraph {
+    margin-top: 2rem;
+    font-size: $font-size-small;
+    line-height: 1.5;
+    color: $secondary-color-dark;
+
+    @include respond(tab-port) {
+      margin-top: 3rem;
+      text-align: center;
+    }
+  }
+
+  &__content {
+    justify-self: center;
+
+    @include respond(tab-port) {
+      grid-row: 2 / 3;
+    }
+  }
+
+  &__list {
+    font-size: $font-size-small;
+    color: $default-color;
+    font-weight: bold;
+  }
+
+  &__item {
+    font-weight: normal;
+    list-style: none;
+    padding-top: 1.5rem;
+    cursor: pointer;
+  }
+
+  &__link {
+    color: $secondary-color-light;
+    text-decoration: none;
+    transition: $default-transition;
+
+    &:hover {
+      color: $secondary-color-dark;
+    }
+  }
+
+  &__subscribe {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: $font-size-small;
+
+    @include respond(tab-port) {
+      align-self: center;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      grid-row: 3 / 4;
+      grid-column: 1 / 6;
+    }
+
+    a {
+      color: $default-color;
+      font-weight: bold;
+      text-decoration: none;
+
+      @include respond(tab-port) {
+        margin-right: 4rem;
+      }
+
+      &:hover {
+        color: $primary-color-pink-light;
+        transition: $default-transition;
+      }
+    }
+
+    p {
+      color: $secondary-color-dark;
+
+      @include respond(tab-port) {
+        display: none;
+      }
+    }
+  }
+
+  &__email {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    input {
+      display: block;
+      padding: 1.2rem 1rem;
+      border: 1px solid $border-secondary-color;
+      width: 90%;
+      height: 100%;
+      border-radius: 3px;
+      outline: none;
+      transition: $default-transition;
+
+      &:focus {
+        border: 1px solid $primary-color-pink-light;
+        width: 100%;
+
+        & + button {
+          right: 1rem;
+        }
+      }
+    }
+
+    button {
+      position: absolute;
+      padding: 1rem;
+      right: 2.5rem;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      background-color: $color-white;
+      color: $primary-color-pink-light;
+      transition: $default-transition;
+
+      @include respond(tab-port) {
+        right: 5rem;
+      }
+
+      &:hover {
+        i {
+          color: $primary-color-pink-dark;
+        }
+      }
+    }
+  }
+
+  &__rights {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid $secondary-color-dark;
+    padding: 2.6rem 14rem;
+
+    @include respond(screen-700) {
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 2.6rem 6rem;
+    }
+  }
+
+  &__copyright {
+    font-size: $font-size-small;
+    color: $secondary-color-dark;
+  }
+
+  &__social {
+    display: flex;
+    justify-content: flex-end;
+
+    @include respond(screen-700) {
+      margin-top: 2rem;
+    }
+
+    .fab {
+      padding: 0 1rem;
+      font-size: $font-size-large;
+      color: $primary-color-pink-light;
+      transition: $default-transition;
+
+      @include respond(screen-700) {
+        padding: 0 2rem;
+      }
+
+      &:hover {
+        color: $primary-color-pink-dark;
+      }
+    }
+  }
+}
